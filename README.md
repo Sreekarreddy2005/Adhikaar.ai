@@ -1,185 +1,315 @@
-<div align="center">
-  <h1>🇮🇳 Adhikaar.ai</h1>
-  <p><b>Autonomous Multi-Agent Scholarship Execution Pipeline</b></p>
-  <p><i>AWS AI for Bharat Hackathon 2026 - Final Prototype Submission</i></p>
+🇮🇳 Adhikaar.ai
+Autonomous Multi-Agent Scholarship Execution Pipeline
 
-  <img src="https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS" />
-  <img src="https://img.shields.io/badge/AWS_Lambda-FF9900?style=for-the-badge&logo=aws-lambda&logoColor=white" alt="AWS Lambda" />
-  <img src="https://img.shields.io/badge/Amazon_DynamoDB-4053D6?style=for-the-badge&logo=amazon-dynamodb&logoColor=white" alt="DynamoDB" />
-  <img src="https://img.shields.io/badge/Generative_AI-Bedrock_Nova-005276?style=for-the-badge" alt="Amazon Bedrock" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
-</div>
+AWS AI for Bharat Hackathon 2026 – Final Prototype Submission
 
-<br />
+Adhikaar.ai is an AI-powered autonomous system designed to help students automatically apply for government scholarships. The platform eliminates manual form filling by using AI-driven document understanding, intelligent policy routing, and automated portal submission.
 
-## 📖 Table of Contents
-- [Executive Summary](#-executive-summary)
-- [System Architecture](#-system-architecture)
-- [Microservices & Agent Swarm](#-microservices--agent-swarm)
-- [Enterprise Security Posture](#-enterprise-security-posture)
-- [Repository Structure](#-repository-structure)
-- [Local Deployment & Setup](#-local-deployment--setup)
-- [Cloud Infrastructure Economics](#-cloud-infrastructure-economics)
+The system uses AWS serverless architecture, generative AI, and headless automation agents to simplify the complex scholarship application process faced by millions of students in India.
 
----
+📜 Project Overview
 
-## 🚀 Executive Summary
+Every year, thousands of students lose access to educational funding due to:
 
-**Adhikaar.ai** engineers a paradigm shift in Indian government welfare distribution: transitioning from *passive web portals* to *proactive autonomous agents*. 
+Complex government portals
 
-Millions in minority and rural educational funding are lost annually due to digital illiteracy, complex bureaucratic logic, and chronic `504 Gateway Timeouts` on legacy portals. We engineered a 100% serverless, event-driven AWS architecture that dynamically extracts, cryptographically secures, semanticizes, and autonomously submits complex scholarship applications with zero human intervention.
+Digital illiteracy
 
----
+Slow or unstable infrastructure
 
-## 🏛️ System Architecture
+Difficult documentation processes
 
-Our event-driven pipeline leverages a hybrid cloud architecture, isolating the Cognitive, Orchestration, and Execution layers for maximum fault tolerance.
+Adhikaar.ai solves this problem by building a fully automated scholarship execution pipeline that:
 
-```mermaid
-graph TD
-    A[React PWA Client] -->|AES-256 Encrypted Payload| B(API Gateway / Orchestrator Lambda)
-    B -->|Transient Storage| C[(Amazon S3 Vault)]
-    B -->|IDP Extraction| D[Amazon Textract]
-    D -->|Raw String / Tabular Data| B
-    B -->|System Prompt + OCR Data| E{Amazon Bedrock: Nova Lite}
-    E -->|Semantic JSON & Fraud Flags| B
-    B -->|State Mutation| F[(Amazon DynamoDB)]
-    F -->|Event Stream / CRON| G[AWS Fargate Swarm]
-    G -->|Headless DOM Injection| H[Legacy Gov Portals]
-    G -->|Async Session Recovery| F
-Gemini said
-Here is the complete, enterprise-grade Markdown code ready for you to copy and paste directly into your README.md file.
+Extracts data from uploaded documents
 
-Just click the "Copy code" button at the top right of this block, paste it into your README.md in VS Code, and save!
+Uses AI to interpret and validate the information
 
-Markdown
-<div align="center">
-  <h1>🇮🇳 Adhikaar.ai</h1>
-  <p><b>Autonomous Multi-Agent Scholarship Execution Pipeline</b></p>
-  <p><i>AWS AI for Bharat Hackathon 2026 - Final Prototype Submission</i></p>
+Identifies the best scholarship scheme
 
-  <img src="https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS" />
-  <img src="https://img.shields.io/badge/AWS_Lambda-FF9900?style=for-the-badge&logo=aws-lambda&logoColor=white" alt="AWS Lambda" />
-  <img src="https://img.shields.io/badge/Amazon_DynamoDB-4053D6?style=for-the-badge&logo=amazon-dynamodb&logoColor=white" alt="DynamoDB" />
-  <img src="https://img.shields.io/badge/Generative_AI-Bedrock_Nova-005276?style=for-the-badge" alt="Amazon Bedrock" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
-</div>
+Automatically fills and submits the government application
 
-<br />
+This transforms the traditional manual application process into an autonomous AI workflow.
 
-## 📖 Table of Contents
-- [Executive Summary](#-executive-summary)
-- [System Architecture](#-system-architecture)
-- [Microservices & Agent Swarm](#-microservices--agent-swarm)
-- [Enterprise Security Posture](#-enterprise-security-posture)
-- [Repository Structure](#-repository-structure)
-- [Local Deployment & Setup](#-local-deployment--setup)
-- [Cloud Infrastructure Economics](#-cloud-infrastructure-economics)
+✨ Key Features
+🤖 Intelligent Document Processing
 
----
+Uses Amazon Textract to extract structured information from documents such as:
 
-## 🚀 Executive Summary
+Income certificates
 
-**Adhikaar.ai** engineers a paradigm shift in Indian government welfare distribution: transitioning from *passive web portals* to *proactive autonomous agents*. 
+Caste certificates
 
-Millions in minority and rural educational funding are lost annually due to digital illiteracy, complex bureaucratic logic, and chronic `504 Gateway Timeouts` on legacy portals. We engineered a 100% serverless, event-driven AWS architecture that dynamically extracts, cryptographically secures, semanticizes, and autonomously submits complex scholarship applications with zero human intervention.
+Aadhaar cards
 
----
+Marksheets
 
-## 🏛️ System Architecture
+This eliminates manual data entry.
 
-Our event-driven pipeline leverages a hybrid cloud architecture, isolating the Cognitive, Orchestration, and Execution layers for maximum fault tolerance.
+🧠 AI Decision Engine
 
-```mermaid
-graph TD
-    A[React PWA Client] -->|AES-256 Encrypted Payload| B(API Gateway / Orchestrator Lambda)
-    B -->|Transient Storage| C[(Amazon S3 Vault)]
-    B -->|IDP Extraction| D[Amazon Textract]
-    D -->|Raw String / Tabular Data| B
-    B -->|System Prompt + OCR Data| E{Amazon Bedrock: Nova Lite}
-    E -->|Semantic JSON & Fraud Flags| B
-    B -->|State Mutation| F[(Amazon DynamoDB)]
-    F -->|Event Stream / CRON| G[AWS Fargate Swarm]
-    G -->|Headless DOM Injection| H[Legacy Gov Portals]
-    G -->|Async Session Recovery| F
-🧠 Microservices & Agent Swarm
-1. The Perception Agent (Intelligent Document Processing)
-Powered by Amazon Textract, this agent handles degraded, low-DPI rural scans. It parses complex tabular structures (e.g., marksheets) and raw strings (e.g., income certificates) into unstructured text arrays, completely bypassing manual data entry.
+Using Amazon Bedrock (Nova Lite), the system:
 
-2. The Cognitive Agent (Generative Decision Engine)
-Utilizing Amazon Bedrock (Nova Lite), this agent acts as the brain of the pipeline:
+Converts messy OCR text into structured JSON
 
-Semantic Normalization: Converts chaotic Textract strings into strict JSON schemas.
+Verifies applicant identity information
 
-Fraud Detection: Deterministically cross-references Aadhaar hashing against Income/Caste certificates to flag identity spoofing.
+Detects possible fraud patterns
 
-Algorithmic Policy Routing: Evaluates overlapping government matrixes (e.g., State vs. Central Post-Matric schemes) to calculate and dispatch the path of Maximum Financial Yield.
+Determines the most suitable scholarship program
 
-3. The Execution Agent (Headless Swarm)
-Containerized bots packaged via Docker and orchestrated via AWS Fargate. Using Playwright/Selenium, these agents deploy ephemeral headless browser instances that physically emulate human typing, bypass legacy portal restrictions, and stream payloads directly into government DOMs.
+⚙️ Autonomous Application Execution
 
-4. Stateful Resilience Engine
-Powered by Amazon DynamoDB, acting as the single source of truth. It intercepts mid-submission 504 Timeouts, preserves the application session state, and initiates exponential backoff algorithms during off-peak server hours.
+Headless browser agents automatically submit applications on government portals using:
 
-🛡️ Enterprise Security Posture
-We treat student PII (Personally Identifiable Information) with military-grade compliance:
+Playwright
 
-Zero-Retention Ephemeral Vaulting: Documents are uploaded to Amazon S3 for transient processing and instantly purged via strict IAM lifecycle policies post-execution.
+Selenium
 
-Cryptographic Hashing: Bank details and Aadhaar numbers undergo aes-256-cbc client-side encryption before ever touching DynamoDB.
+Docker containers
 
-Stateless Cloud Processing: The AWS Lambda orchestrator holds sensitive data strictly in transient memory during the Textract -> Bedrock pipeline.
+AWS Fargate orchestration
 
-📂 Repository Structure (Monorepo)
-This repository serves as a unified monorepo containing both local testing environments and AWS production logic.
+These bots simulate human interaction with legacy websites.
 
-Directory / File	Description
-/adhikaar-frontend	React/Tailwind Progressive Web App (PWA) optimized for low-bandwidth rural networks.
-/aws-backend-lambdas	Core AWS Logic: Contains the Node.js source deployed to our AWS Lambda orchestrators, including the Bedrock and Textract integration.
-/headless-agent	Dockerized Playwright/Selenium bot scripts intended for AWS Fargate deployment.
-/dummy-portal	A simulated local government portal used for rigorous bot execution testing.
-/local-api	Local API mock server for testing the frontend UI states without burning AWS compute.
-database-schema.md	Complete schema documentation for our state-tracking Amazon DynamoDB tables.
-💻 Local Deployment & Setup
-Prerequisites
-Node.js (v18+)
+🔄 Fault Tolerant Processing
 
-Docker (for Fargate execution testing)
+A state tracking engine powered by DynamoDB ensures that applications are not lost even if government portals crash.
 
-AWS CLI configured with appropriate IAM roles (Bedrock Runtime, Textract, S3, DynamoDB access)
+Features include:
 
-1. Environment Variables
-Create a .env file in the root of /aws-backend-lambdas based on the following template:
+Session recovery
 
-Code snippet
+Retry mechanisms
+
+Timeout recovery
+
+Background queue execution
+
+🔐 Privacy & Security
+
+Student personal information is protected through:
+
+AES-256 encryption
+
+Secure document vault storage
+
+Temporary data retention
+
+Stateless serverless processing
+
+🏗️ System Architecture
+
+The platform is built using a serverless event-driven architecture.
+
+Core architecture layers include:
+
+1️⃣ Client Layer
+
+A React Progressive Web App (PWA) allows students to upload their documents.
+
+Optimized for:
+
+Mobile devices
+
+Low bandwidth rural networks
+
+Simple user experience
+
+2️⃣ Orchestration Layer
+
+AWS Lambda functions coordinate the entire pipeline:
+
+File upload handling
+
+Document processing requests
+
+AI model inference
+
+Database updates
+
+3️⃣ Cognitive Layer
+
+AI services process and analyze application data.
+
+Technologies used:
+
+Amazon Textract
+
+Amazon Bedrock
+
+Custom prompt engineering
+
+Fraud detection logic
+
+4️⃣ Execution Layer
+
+Containerized automation agents execute the application process.
+
+Tools used:
+
+Playwright
+
+Selenium
+
+Docker
+
+AWS Fargate
+
+These agents submit forms directly on government portals.
+
+5️⃣ State Management Layer
+
+Application progress is tracked using Amazon DynamoDB, ensuring reliability even during portal failures.
+
+💻 Tech Stack
+Frontend
+
+React.js
+
+Tailwind CSS
+
+Progressive Web App (PWA)
+
+Backend
+
+Node.js
+
+AWS Lambda
+
+API Gateway
+
+AI / Machine Learning
+
+Amazon Bedrock
+
+Nova Lite Model
+
+Prompt Engineering
+
+Document AI
+
+Cloud Infrastructure
+
+AWS Lambda
+
+Amazon DynamoDB
+
+Amazon S3
+
+AWS Fargate
+
+Amazon Textract
+
+Automation
+
+Playwright
+
+Selenium
+
+Docker
+
+DevOps
+
+Git
+
+GitHub
+
+AWS CLI
+
+📂 Repository Structure
+adhikaar-ai
+│
+├── adhikaar-frontend
+│   React PWA for student interface
+│
+├── aws-backend-lambdas
+│   Core AWS serverless functions
+│
+├── headless-agent
+│   Dockerized automation agents
+│
+├── dummy-portal
+│   Local simulation of government portal
+│
+├── local-api
+│   Mock API server for frontend testing
+│
+└── database-schema.md
+    DynamoDB schema documentation
+🚀 Setup and Installation
+
+Follow these steps to run the project locally.
+
+1️⃣ Clone the Repository
+git clone https://github.com/YOUR_USERNAME/adhikaar-ai.git
+cd adhikaar-ai
+2️⃣ Install Frontend Dependencies
+cd adhikaar-frontend
+npm install
+npm run dev
+3️⃣ Configure Environment Variables
+
+Create a .env file in the backend directory.
+
 AWS_REGION=ap-south-1
 S3_VAULT_BUCKET_NAME=adhikaar-secure-vault-2026
 DYNAMODB_TABLE_NAME=Adhikaar_Applications
 ENCRYPTION_SECRET_KEY=your_aes_256_secure_key
-2. Run the Client PWA
-Bash
-cd adhikaar-frontend
+4️⃣ Configure AWS CLI
+
+Make sure AWS CLI is installed and configured.
+
+Required permissions:
+
+Amazon Textract
+
+Amazon Bedrock
+
+S3 access
+
+DynamoDB access
+
+Lambda execution roles
+
+5️⃣ Run Backend Services
+
+Navigate to the backend directory and run the local API.
+
+cd aws-backend-lambdas
 npm install
-npm run dev
-3. Review the Cloud Orchestrator
-Judges evaluating the AWS integration should navigate to /aws-backend-lambdas/orchestrator.js. This file contains the complete Serverless Node.js logic integrating Amazon Bedrock (ConverseCommand) and Amazon Textract (AnalyzeDocumentCommand).
+node orchestrator.js
+📊 Infrastructure Economics
 
-📊 Cloud Infrastructure Economics
-By leveraging a 100% event-driven serverless architecture, the platform maintains a Zero-Cost Idle State.
+The platform uses serverless architecture, meaning there is zero cost when idle.
 
-Execution Cost: ~$0.22 (approx. ₹18) per student application.
+Metric	Value
+Average Execution Cost	~$0.22 (~₹18) per application
+Scholarship Value Unlocked	₹15,000+ average
+Manual Application Time	120+ minutes
+Adhikaar.ai Application Time	< 3 minutes
+🌍 Impact
 
-Financial Yield: Autonomously unlocks ₹15,000+ in average educational funding.
+Adhikaar.ai aims to improve accessibility to government welfare programs by:
 
-Time-to-Apply: Reduced from 120+ minutes (manual data entry) to < 3 minutes (single-upload autonomous queue).
+Reducing application complexity
 
-🚀 How to update this in GitHub:
-After you paste and save this in VS Code, open your terminal and run these commands to push the beautiful new README to your repository:
+Increasing scholarship adoption
 
-git add README.md
+Supporting rural students
 
-git commit -m "docs: added enterprise-grade README with Mermaid diagram and tech stack"
+Automating bureaucratic workflows
 
-git push origin main
+This system demonstrates how AI agents can modernize public service delivery.
+
+⚠️ Disclaimer
+
+This project is a prototype developed for the AWS AI for Bharat Hackathon 2026.
+
+The system simulates automated scholarship submissions and is intended for research and demonstration purposes only. It should not be used for real government portal automation without official authorization.
+
+👨‍💻 Author
+
+Sreekar Reddy Pindi
+Computer Science Student
+AI / Backend Development Enthusiast

@@ -1,0 +1,13 @@
+{
+  "name": "adhikaar-orchestrator",
+  "version": "1.0.0",
+  "description": "AWS Lambda function for Adhikaar.ai Orchestration",
+  "main": "orchestrator.js",
+  "type": "module",
+  "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "^3.500.0",
+    "@aws-sdk/client-dynamodb": "^3.500.0",
+    "@aws-sdk/client-s3": "^3.500.0",
+    "@aws-sdk/client-textract": "^3.500.0"
+  }
+}

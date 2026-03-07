@@ -1,0 +1,13 @@
+{
+  "name": "adhikaar-agent",
+  "version": "1.0.0",
+  "description": "Autonomous Scholarship Execution Agent",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.0.0",
+    "puppeteer": "^22.0.0"
+  }
+}

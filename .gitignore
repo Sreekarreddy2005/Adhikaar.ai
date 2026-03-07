@@ -1,0 +1,39 @@
+# 1. Node.js Dependencies (NEVER push these)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# 2. Environment Variables & Secrets (CRITICAL SECURITY)
+.env
+.env.local
+.env.development
+.env.production
+*.pem
+*.key
+credentials.json
+
+# 3. Frontend Build Folders (Generated automatically, don't push)
+dist/
+build/
+.next/
+
+# 4. Headless Agent / Playwright Junk (Logs & Screenshots)
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+*.jpeg
+*.png
+*.pdf
+
+# 5. OS & Editor Junk Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# 6. Python caches (Just in case you added Python scripts later)
+__pycache__/
+*.pyc
+venv/
+.venv/

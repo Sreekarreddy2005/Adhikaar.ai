@@ -4,7 +4,7 @@
 
 ### Autonomous Multi-Agent Scholarship Execution Pipeline
 
-**AWS AI for Bharat Hackathon 2026 — Final Prototype Submission**
+**AWS AI for Bharat Hackathon 2026 — Top Innovator Project**
 
 ![AWS](https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![AWS Lambda](https://img.shields.io/badge/AWS_Lambda-FF9900?style=for-the-badge&logo=aws-lambda&logoColor=white)

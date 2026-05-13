@@ -5,6 +5,19 @@
 ### Autonomous Multi-Agent Scholarship Execution Pipeline
 
 **AWS AI for Bharat Hackathon 2026 — Top Innovator Project**
+<div align="center">
+
+# Adhikaar.ai
+
+### Autonomous Multi-Agent Scholarship Execution Pipeline
+
+**AWS AI for Bharat Hackathon 2026 — Top Innovator Project**
+
+🌐 Live Demo:  
+https://main.dshl7erjor3fd.amplifyapp.com/
+
+🎥 Video Demo:  
+[https://your-video-link-here.com](https://drive.google.com/file/d/1su7RU0A23EH6nrHpBIJAb6HGljjeejgN/view?usp=sharing)
 
 ![AWS](https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![AWS Lambda](https://img.shields.io/badge/AWS_Lambda-FF9900?style=for-the-badge&logo=aws-lambda&logoColor=white)
@@ -14,8 +27,6 @@
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 
 </div>
-
----
 
 # 📜 Project Overview
 

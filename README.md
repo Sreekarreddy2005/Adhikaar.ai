@@ -194,6 +194,18 @@ Adhikaar.ai helps increase access to government education funding by:
 
 ---
 
+## 🌐 Live Demo & Demo Video
+
+### 🔗 Live Portal
+> Hosted on AWS Amplify — accessible on mobile and desktop.
+
+[![Launch App](https://img.shields.io/badge/Launch_App-Adhikaar.ai-FF9900?style=for-the-badge&logo=aws-amplify&logoColor=white)](https://main.dshl7erjor3fd.amplifyapp.com/)
+
+### 🎥 Demo Video
+> Watch the full walkthrough of the autonomous scholarship pipeline in action.
+
+[![Watch Demo](https://img.shields.io/badge/Watch_Demo-YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://drive.google.com/file/d/1su7RU0A23EH6nrHpBIJAb6HGljjeejgN/view?usp=drive_link)
+
 ## ⚠️ Disclaimer
 
 This project is a prototype built for the **AWS AI for Bharat Hackathon 2026**. The system is intended for research and demonstration purposes only and should not be used to automate real government portals without official authorization.
